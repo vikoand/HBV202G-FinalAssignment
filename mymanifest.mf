@@ -1,0 +1,4 @@
+Manifest-Version: 1.0
+Main-Class: hi.verkefni.vidmot.TakeAwayApplication
+Class-Path: target/classes/
+Created-By: 17.0.6 (Eclipse Adoptium)
