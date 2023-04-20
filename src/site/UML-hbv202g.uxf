@@ -1,0 +1,540 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.1">
+  <zoom_level>5</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>60</x>
+      <y>175</y>
+      <w>190</w>
+      <h>155</h>
+    </coordinates>
+    <panel_attributes>hi.verkefni.vidmot::GreidslaController
+--
++skilabod: Label
++tilGreidslu: Label
++pontun: Label
++nafn: Label
++timi: Label
++tilGR: Label
++uppH: Label
++heimilisf: Label
+-pontunController: PontunController
+-SKILABOD = "Pöntun þín hefur verið staðfest": String
+-ILAGI = "Í lagi": String
+--
++initialize(): void
++fxStadfestaHandler(ActionEvent actionEvent): void
++onBack(ActionEvent actionEvent): void
+-stofnaAlert(ButtonType bIlagi): Alert
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>360</x>
+      <y>180</y>
+      <w>190</w>
+      <h>145</h>
+    </coordinates>
+    <panel_attributes>hi.verkefni.vidmot::PontunController
+--
++listiMatur: MatsedillView
++listiKarfa: ListView&lt;Veitingar&gt;
++fxUpphaed: TextField
++karfan: Karfa
++fxNotandi: Label
++vidVinur: Vidskiptavinur
++fxGreidaTakki: Button
+--
++initialize(): void
++fxTakaUrKorfu(ActionEvent actionEvent): void
++hreinsa(): void
++fxBaetaKorfuHandler(ActionEvent actionEvent): void
++fxInnskraningHandler(ActionEvent actionEvent): void
++fxGreidaHandler(ActionEvent actionEvent): void
++greidaRegla(): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>450</x>
+      <y>370</y>
+      <w>120</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>hi.verkefni.vidmot::MatsedillView
+--
+-m: Matsedill
+--
++MatsedillView(): ctor
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>605</x>
+      <y>340</y>
+      <w>145</w>
+      <h>85</h>
+    </coordinates>
+    <panel_attributes>hi.verkefni.vidmot::VidskiptavinurDialog
+--
++fxNafn: TextField
++fxHeimilisfang: TextField
++fxILagi: ButtonType
+--
++VidskiptavinurDialog(): ctor
+-lesaVidskiptavinur(): DialogPane
++getVidskiptavinur(): Vidskiptavinur
++iLagiRegla(): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>220</x>
+      <y>90</y>
+      <w>150</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>hi.verkefni.vidmot::TakeAwayApplication
+--
+--
++start(Stage stage): void
++main(String[] args): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>215</x>
+      <y>395</y>
+      <w>185</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>hi.verkefni.vidmot::ViewSwitcher
+--
+-cache = new HashMap(): Map&lt;View, Parent&gt;
+-controllers = new HashMap(): Map&lt;View, Object&gt;
+-scene: Scene
+--
++setScene(Scene scene): void
++switchTo(View view): void
++lookup(View v): Object
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>610</x>
+      <y>665</y>
+      <w>185</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>vinnsla::Veitingar
+--
+-rettur = new SimpleStringProperty(): StringProperty
+-verd = new SimpleIntegerProperty(): IntegerProperty
+--
++Veitingar(String rettur, int verd): ctor
++getRettur(): String
++retturProperty(): StringProperty
++setRettur(String rettur): void
++getVerd(): int
++verdProperty(): IntegerProperty
++setVerd(int verd): void
++toString(): String
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>650</x>
+      <y>525</y>
+      <w>255</w>
+      <h>95</h>
+    </coordinates>
+    <panel_attributes>vinnsla::Karfa
+--
+#karfa = FXCollections.observableArrayList(): ObservableList&lt;Veitingar&gt;
+-heildarverd = new SimpleIntegerProperty(): IntegerProperty
+--
++getKarfa(): ObservableList&lt;Veitingar&gt;
++setKarfa(ObservableList&lt;Veitingar&gt; karfa): void
++setHeildarverd(int heildarverd): void
++getHeildarverd(): int
++heildarverdProperty(): IntegerProperty
++reiknaHeildarverd(): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>270</x>
+      <y>535</y>
+      <w>270</w>
+      <h>55</h>
+    </coordinates>
+    <panel_attributes>vinnsla::Matsedill
+--
+#veitingar = FXCollections.observableArrayList(): ObservableList&lt;Veitingar&gt;
+--
++Matsedill(): ctor
++getMatsedill(): ObservableList&lt;Veitingar&gt;
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>80</x>
+      <y>380</y>
+      <w>105</w>
+      <h>95</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;enumeration&gt;&gt;
+hi.verkefni.vidmot::View
+--
+PONTUN
+INNSKRANING
+GREIDSLA
+--
+-filename:String
+--
+/+getFilename(): String/
+/+View(String filename):ctor/
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>545</x>
+      <y>275</y>
+      <w>145</w>
+      <h>75</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>270.0;130.0;270.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>490</x>
+      <y>320</y>
+      <w>15</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;100.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>180</x>
+      <y>425</y>
+      <w>45</w>
+      <h>15</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;70.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>385</x>
+      <y>320</y>
+      <w>15</w>
+      <h>85</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;150.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>520</x>
+      <y>445</y>
+      <w>50</w>
+      <h>20</h>
+    </coordinates>
+    <panel_attributes>ListView</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>535</x>
+      <y>410</y>
+      <w>15</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;70.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>290</x>
+      <y>45</y>
+      <w>15</w>
+      <h>55</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>270</x>
+      <y>35</y>
+      <w>50</w>
+      <h>15</h>
+    </coordinates>
+    <panel_attributes>Application</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>675</x>
+      <y>420</y>
+      <w>70</w>
+      <h>75</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-
+&lt;&lt;Vidskiptavinur&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;130.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>770</x>
+      <y>615</y>
+      <w>15</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;100.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>390</x>
+      <y>585</y>
+      <w>230</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>440.0;280.0;10.0;280.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>545</x>
+      <y>295</y>
+      <w>115</w>
+      <h>255</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>210.0;490.0;90.0;490.0;90.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>225</x>
+      <y>325</y>
+      <w>15</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;140.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>290</x>
+      <y>130</y>
+      <w>15</w>
+      <h>275</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;530.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>465</x>
+      <y>410</y>
+      <w>15</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;240.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>655</x>
+      <y>485</y>
+      <w>50</w>
+      <h>15</h>
+    </coordinates>
+    <panel_attributes>Dialog</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>790</x>
+      <y>335</y>
+      <w>235</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>vinnsla::Vidskiptavinur
+--
+-nafn = new SimpleStringProperty(): StringProperty
+-heimilisfang = new SimpleStringProperty(): StringProperty
+--
++Vidskiptavinur(StringProperty nafn, StringProperty heimilisf): ctor
++getNafn(): String
++nafnProperty(): StringProperty
++setNafn(String nafn): void
++getHeimilisfang(): String
++heimilisfangProperty(): StringProperty
++setHeimilisfang(String heimilisfang): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>745</x>
+      <y>370</y>
+      <w>55</w>
+      <h>15</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;90.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>245</x>
+      <y>240</y>
+      <w>125</w>
+      <h>15</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;230.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>125</x>
+      <y>325</y>
+      <w>15</w>
+      <h>65</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;110.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>160</x>
+      <y>320</y>
+      <w>220</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;120.0;10.0;80.0;420.0;80.0;420.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>325</x>
+      <y>130</y>
+      <w>115</w>
+      <h>415</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>210.0;810.0;210.0;440.0;10.0;440.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>535</x>
+      <y>560</y>
+      <w>125</w>
+      <h>15</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;</panel_attributes>
+    <additional_attributes>230.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>545</x>
+      <y>195</y>
+      <w>540</w>
+      <h>540</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>500.0;1060.0;1060.0;1060.0;1060.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>545</x>
+      <y>225</y>
+      <w>375</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;730.0;10.0;730.0;220.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>105</x>
+      <y>130</y>
+      <w>75</w>
+      <h>25</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Javafx&gt;&gt;
+greidsla-view.fxml</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>130</x>
+      <y>150</y>
+      <w>15</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;50.0</additional_attributes>
+  </element>
+</diagram>
