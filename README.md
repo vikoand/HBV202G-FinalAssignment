@@ -26,8 +26,8 @@ The Diagram for this project can be found [here](src/site/markdown/UmlDiagram.MD
 
 ## Design patterns:
 
-This project uses the observer pattern. We used ObservableList for the cart and the courses on the menu. The pattern is necessary in this program because when something is added or removed from the cart
-the price has to update accordingly.
+This project uses the observer pattern. The pattern is necessary in this program because when something is added or removed from the cart the price has to update accordingly so the user pays the right amount for their selected products.
+We used ObservableList for the cart and the courses on the menu for this to work.
 
 ## End user documentation:
 
