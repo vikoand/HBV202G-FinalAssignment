@@ -8,6 +8,12 @@
     <artifactId>vidmot</artifactId>
     <version>1.0-SNAPSHOT</version>
     <name>TakeAway</name>
+    <licenses>
+        <license>
+            <name>MIT</name>
+            <url>http://www.opensource.org/licenses/mit-license.php</url>
+        </license>
+    </licenses>
     <url>http://maven.apache.org</url>
 
     <properties>
