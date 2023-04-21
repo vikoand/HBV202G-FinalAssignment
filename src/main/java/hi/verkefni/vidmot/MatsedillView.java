@@ -1,10 +1,8 @@
 package hi.verkefni.vidmot;
 
-import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.ListView;
-import vinnsla.Matsedill;
-import vinnsla.Veitingar;
+import hi.verkefni.vinnsla.Matsedill;
 
 public class MatsedillView extends ListView {
 

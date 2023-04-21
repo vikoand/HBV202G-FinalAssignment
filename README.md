@@ -2,11 +2,11 @@
 
 A project skeleton for the final project for the course HBV202G.
 
-The implementation is in the Java package `hi.verkefni.vidmot` and `vinnsla` and the test is in Java package `test`, they are also in the usual separate Maven `src` directories:
+The implementation is in the Java package `hi.verkefni.vidmot` and `hi.verkefni.vinnsla` and the test is in Java package `test`, they are also in the usual separate Maven `src` directories:
 
 - `src/main/java`:
   - `hi.verkefni.vidmot`: Implementation for the frontend of the project.
-  - `vinnsla`: Implementation for the backend of the project.
+  - `hi.verkefni.vinnsla`: Implementation for the backend of the project.
 
 - `src/test/java`:
 - `greidslaTest`: Test cases testing payment implementation that is observed by the cart (karfa) and courses(veitingar) implementation.

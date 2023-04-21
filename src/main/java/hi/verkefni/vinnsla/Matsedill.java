@@ -1,4 +1,4 @@
-package vinnsla;
+package hi.verkefni.vinnsla;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;

@@ -1,23 +1,11 @@
 package hi.verkefni.vidmot;
 
-import javafx.collections.FXCollections;
-import javafx.collections.ListChangeListener;
-import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.*;
-import javafx.stage.Stage;
-import vinnsla.Karfa;
-import vinnsla.Matsedill;
-import vinnsla.Veitingar;
-import vinnsla.Vidskiptavinur;
-
-import java.io.IOException;
-import java.util.Optional;
+import hi.verkefni.vinnsla.Karfa;
+import hi.verkefni.vinnsla.Veitingar;
+import hi.verkefni.vinnsla.Vidskiptavinur;
 
 public class PontunController {
     /**

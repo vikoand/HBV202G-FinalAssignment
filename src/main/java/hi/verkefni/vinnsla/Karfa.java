@@ -1,9 +1,8 @@
-package vinnsla;
+package hi.verkefni.vinnsla;
 
 import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.collections.FXCollections;
-import javafx.collections.ListChangeListener;
 import javafx.collections.ObservableList;
 
 public class Karfa extends Matsedill{

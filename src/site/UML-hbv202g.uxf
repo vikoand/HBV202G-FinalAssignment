@@ -145,7 +145,7 @@
       <w>185</w>
       <h>110</h>
     </coordinates>
-    <panel_attributes>vinnsla::Veitingar
+    <panel_attributes>hi.verkefni.vinnsla::Veitingar
 --
 -rettur = new SimpleStringProperty(): StringProperty
 -verd = new SimpleIntegerProperty(): IntegerProperty
@@ -170,7 +170,7 @@
       <w>255</w>
       <h>95</h>
     </coordinates>
-    <panel_attributes>vinnsla::Karfa
+    <panel_attributes>hi.verkefni.vinnsla::Karfa
 --
 #karfa = FXCollections.observableArrayList(): ObservableList&lt;Veitingar&gt;
 -heildarverd = new SimpleIntegerProperty(): IntegerProperty
@@ -193,7 +193,7 @@
       <w>270</w>
       <h>55</h>
     </coordinates>
-    <panel_attributes>vinnsla::Matsedill
+    <panel_attributes>hi.verkefni.vinnsla::Matsedill
 --
 #veitingar = FXCollections.observableArrayList(): ObservableList&lt;Veitingar&gt;
 --
@@ -410,7 +410,7 @@ GREIDSLA
       <w>235</w>
       <h>100</h>
     </coordinates>
-    <panel_attributes>vinnsla::Vidskiptavinur
+    <panel_attributes>hi.verkefni.vinnsla::Vidskiptavinur
 --
 -nafn = new SimpleStringProperty(): StringProperty
 -heimilisfang = new SimpleStringProperty(): StringProperty

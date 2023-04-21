@@ -2,13 +2,10 @@ package hi.verkefni.vidmot;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonBar;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.Label;
-import vinnsla.Karfa;
-import vinnsla.Vidskiptavinur;
 
 public class GreidslaController {
 
