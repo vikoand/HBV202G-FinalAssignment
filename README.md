@@ -22,7 +22,7 @@ This project is a Maven project, i.e. it uses the standard Maven project structu
 
 ## UML Diagram:
 
-The Diagram for this project can be found [here](src/site/markdown/UmlDiagram.MD)
+The Diagram for this project can be found [here](src/site/markdown/UmlDiagram.MD/uml.png)
 
 ## Design patterns:
 
